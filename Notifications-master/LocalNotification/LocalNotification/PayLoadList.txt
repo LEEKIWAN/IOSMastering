@@ -1,0 +1,72 @@
+-1
+{
+  "aps": {
+    "alert": "Enter your message",
+    "badge": 1,
+    "sound": "default"
+  }
+}
+
+
+-2
+{
+  "aps": {
+    "alert": {
+      "title" : "Hello",
+      "body" : "Notification Hub Test Notification"
+    },
+    "badge": 1,
+    "sound": "default"
+  }
+}
+
+-3
+{
+  "aps": {
+    "alert": {
+      "title" : "Hello",
+      "body" : "Notification Hub Test Notification"
+    },
+    "badge": 1,
+    "sound": "default"
+  },
+  "data" : "Have a nice Day :)"
+}
+
+-4
+{
+  "aps": {
+    "content-available": 1,
+    "badge": 123
+  },
+  "data" : "Silent Push123"
+}
+
+
+-5
+{
+  "aps": {
+    "alert": "Hello kiwan",
+    "badge": 1,
+    "sound": "default",
+    "category" : "CATEGORY_FRIEND_REQUEST"
+
+  }
+}
+
+
+-6
+{
+  "aps": {
+    "alert": {
+      "title" : "Hello",
+      "body" : "Notification Hub Test Notification"
+    },
+    "badge": 1,
+    "sound": "default",
+    "mutable-content": 1
+  },
+  //
+  "url": "https://goo.gl/JRY3fg",
+  "enc-data" : "SGF2ZSBhIG5pY2UgZGF5IDop"
+}

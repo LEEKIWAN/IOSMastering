@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vtz-dS-4kA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sticky Header View Controller-->
+        <scene sceneID="MYu-fx-NOF">
+            <objects>
+                <viewController id="Vtz-dS-4kA" customClass="StickyHeaderViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5q-Zj-Sv4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7xe-PD-fet">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="66" id="lPl-us-CiU" customClass="CommentTableViewCell" customModule="TableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lPl-us-CiU" id="Ea3-Vc-gUC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwh-KD-QoH">
+                                                    <rect key="frame" x="33" y="24" width="348" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mwh-KD-QoH" secondAttribute="trailing" constant="13" id="0L9-2I-Ygj"/>
+                                                <constraint firstItem="Mwh-KD-QoH" firstAttribute="leading" secondItem="Ea3-Vc-gUC" secondAttribute="leadingMargin" constant="13" id="2g0-Hg-ASK"/>
+                                                <constraint firstItem="Mwh-KD-QoH" firstAttribute="top" secondItem="Ea3-Vc-gUC" secondAttribute="topMargin" constant="13" id="Jz1-un-IRu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mwh-KD-QoH" secondAttribute="bottom" constant="13" id="zMe-XB-Uaf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="Mwh-KD-QoH" id="98d-81-mxp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vtz-dS-4kA" id="LNs-5G-on5"/>
+                                    <outlet property="delegate" destination="Vtz-dS-4kA" id="Bqx-cN-ZPG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7xe-PD-fet" firstAttribute="top" secondItem="ga0-1D-04j" secondAttribute="top" id="0aR-TL-kkL"/>
+                            <constraint firstItem="7xe-PD-fet" firstAttribute="leading" secondItem="ga0-1D-04j" secondAttribute="leading" id="7qU-Gh-HFl"/>
+                            <constraint firstItem="ga0-1D-04j" firstAttribute="trailing" secondItem="7xe-PD-fet" secondAttribute="trailing" id="Iwd-HJ-rUM"/>
+                            <constraint firstItem="ga0-1D-04j" firstAttribute="bottom" secondItem="7xe-PD-fet" secondAttribute="bottom" id="dfY-wT-1lK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ga0-1D-04j"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="7xe-PD-fet" id="9Xp-Mb-kun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vm-hz-SAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.072463768115945" y="96.428571428571431"/>
+        </scene>
+    </scenes>
+</document>
